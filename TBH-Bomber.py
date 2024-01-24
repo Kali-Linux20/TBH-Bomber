@@ -1,4 +1,3 @@
-
 #---------------import------------------#
 import  os,sys,time,requests,random,string
 import shutil
@@ -37,23 +36,19 @@ except (requests.ConnectionError, requests.Timeout) as exception:
 #--------------- check update ----------------------#
 
 def update():
-	toolVersion=1.1
+	toolVersion=1.7
 	mainVersion = requests.get('https://github.com/Kali-Linux20/Update/blob/main/Bomber.txt').text
-	try:
-		if toolVersion in mainVersion:
-			pass
-		else:
-			slowprint("\n    \033[92m[\033[37m!\033[92m] \033[37mTool Update Found!")
-			time.sleep(0.5)
-			slowprint("    \033[92m[\033[37m!\033[92m] \033[37mUpdating Tool: ", end="")
-			os.system("cd .. && rm -rf TBH-Bomber && git clone https://github.com/Kali-Linux20/TBH-Bomber > /dev/null 2>&1")
-			print("\033[37mDone")
-			slowprint("\n    \033[92m[\033[37m*\033[92m] \033[37mStarting Tool...")
-			time.sleep(0.8)
-			os.system("cd .. && cd TBH-Bomber && python TBH-Bomber.py")
-	except:
+	if toolVersion in mainVersion:
 		pass
+	else:
+		slowprint("\n    \033[92m[\033[37m!\033[92m] \033[37mTool Update Found!")
+		time.sleep(0.5)
+		slowprint("    \033[92m[\033[37m!\033[92m] \033[37mUpdating Tool: ", end="")
+		os.system("cd .. && rm -rf TBH-Bomber && git clone https://github.com/Kali-Linux20/TBH-Bomber > /dev/null 2>&1")
+		print("\033[37mDone")
+		slowprint("\n    \033[92m[\033[37m*\033[92m] \033[37mStarting Tool...")
+		time.sleep(0.8)
+		os.system("cd .. && cd TBH-Bomber && python TBH-Bomber.py")
+		
 update()
-print("kali is king")
-
 print("kali is king")
