@@ -55,3 +55,5 @@ def update():
 
 
 print("kali is king")
+print("kali is king")
+print("kali is king")
