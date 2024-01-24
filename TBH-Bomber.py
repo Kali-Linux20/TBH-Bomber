@@ -53,5 +53,5 @@ def update():
 			os.system("cd .. && cd TBH-Bomber && python TBH-Bomber.py")
 	except:
 		pass
-		
+update()
 print("kali is king")
