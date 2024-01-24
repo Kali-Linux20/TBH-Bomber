@@ -34,7 +34,7 @@ except (requests.ConnectionError, requests.Timeout) as exception:
  time.sleep(3)
 #--------------- check update ----------------------#
 def update():
-	toolVersion=1.0
+	toolVersion=1.1
 	try:
 		parsedData = requests.get("https://github.com/Kali-Linux20/Update-2/blob/main/.%20bomber").json()
 	except:
@@ -53,7 +53,7 @@ def update():
 		time.sleep(0.8)
 		os.system("cd .. && cd TBH-Bomber && python TBH-Bomber.py")
 
-
+update()
 print("kali is king")
 print("kali is king")
 print("kali is king")
