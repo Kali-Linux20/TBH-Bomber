@@ -36,7 +36,7 @@ except (requests.ConnectionError, requests.Timeout) as exception:
 #--------------- check update ----------------------#
 
 def update():
-	toolVersion=1
+	toolVersion="1"
 	mainVersion = requests.get('https://github.com/Kali-Linux20/Update/blob/main/Bomber.txt').text
 	if toolVersion in mainVersion:
 		pass
