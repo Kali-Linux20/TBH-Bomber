@@ -54,4 +54,4 @@ def update():
 	except:
 		pass
 		
-print("kali is king")￼Enter
+print("kali is king")
